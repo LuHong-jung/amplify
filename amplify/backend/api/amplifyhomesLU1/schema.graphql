@@ -1,0 +1,38 @@
+type CardData @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  Nunber: String
+  name: String
+  department: String
+  status: String
+  image_url: String
+}
+
+type Groups @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  group_id: String
+  name: String
+  describe: String
+}
+
+type Profile @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  bloodtype: String
+  Location: String
+  birthday: AWSDate
+  email: AWSEmail
+  phone: String
+  information: String
+  image_url: String
+}
+
+type Home @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  address: String
+  price: Float
+  image_url: String
+  email: AWSEmail
+  phone: AWSPhone
+}
+ 
